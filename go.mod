@@ -1,4 +1,4 @@
-module github.com/xeodou/go-sqlcipher
+module github.com/lazyun/go-sqlcipher
 
 go 1.10
 
