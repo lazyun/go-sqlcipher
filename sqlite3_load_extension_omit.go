@@ -7,18 +7,18 @@
 
 package sqlite3
 
-///*
-//#cgo CFLAGS: -DSQLITE_OMIT_LOAD_EXTENSION
-//*/
-//import "C"
-//import (
-//	"errors"
-//)
-//
-//func (c *SQLiteConn) loadExtensions(extensions []string) error {
-//	return errors.New("Extensions have been disabled for static builds")
-//}
-//
-//func (c *SQLiteConn) LoadExtension(lib string, entry string) error {
-//	return errors.New("Extensions have been disabled for static builds")
-//}
+/*
+#cgo CFLAGS: -DSQLITE_OMIT_LOAD_EXTENSION
+*/
+import "C"
+import (
+	"errors"
+)
+
+func (c *SQLiteConn) loadExtensions(extensions []string) error {
+	return errors.New("Extensions have been disabled for static builds")
+}
+
+func (c *SQLiteConn) LoadExtension(lib string, entry string) error {
+	return errors.New("Extensions have been disabled for static builds")
+}
