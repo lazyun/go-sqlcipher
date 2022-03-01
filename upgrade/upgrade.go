@@ -96,7 +96,7 @@ func mergeFile(src string, dst string) error {
 }
 
 func openFile(fileDir string) (string, []byte, error) {
-	b, err := os.ReadFile(fileDir)
+	b, err := ioutil.ReadFile(fileDir)
 	return "", b, err
 }
 
