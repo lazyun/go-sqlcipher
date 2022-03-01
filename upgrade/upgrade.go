@@ -95,17 +95,24 @@ func mergeFile(src string, dst string) error {
 	return nil
 }
 
+func openFile(fileDir string) (string, []byte, error) {
+	b, err := os.ReadFile(fileDir)
+	return "", b, err
+}
+
 func main() {
 	fmt.Println("Go-SQLite3 Upgrade Tool")
 
 	// Download Amalgamation
-	_, amalgamation, err := download("sqlite-amalgamation-")
+	//_, amalgamation, err := download("sqlite-amalgamation-")
+	_, amalgamation, err := openFile("/Users/phoenix/Downloads/software/mac/sqlite-amalgamation-3380000.zip")
 	if err != nil {
 		fmt.Println("Failed to download: sqlite-amalgamation; %s", err)
 	}
 
 	// Download Source
-	_, source, err := download("sqlite-src-")
+	//_, source, err := download("sqlite-src-")
+	_, source, err := openFile("/Users/phoenix/Downloads/software/mac/sqlite-src-3380000.zip")
 	if err != nil {
 		fmt.Println("Failed to download: sqlite-src; %s", err)
 	}
